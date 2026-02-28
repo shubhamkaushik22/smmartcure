@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 200 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 15% 15%;
+
+    --primary: 174 62% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 50% 38%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 180 15% 96%;
+    --muted-foreground: 200 10% 45%;
+
+    --accent: 174 30% 94%;
+    --accent-foreground: 174 62% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 15% 90%;
+    --input: 200 15% 90%;
+    --ring: 174 62% 35%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 174 62% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 174 30% 94%;
+    --sidebar-accent-foreground: 174 62% 25%;
+    --sidebar-border: 200 15% 90%;
+    --sidebar-ring: 174 62% 35%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(174, 62%, 35%), hsl(142, 50%, 38%));
+    --gradient-hero: linear-gradient(135deg, hsl(174, 62%, 30%, 0.92), hsl(142, 50%, 33%, 0.88));
+    --shadow-card: 0 4px 24px -4px hsl(174 62% 35% / 0.08);
+    --shadow-card-hover: 0 8px 32px -4px hsl(174 62% 35% / 0.14);
+
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+}
