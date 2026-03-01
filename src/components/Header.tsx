@@ -17,9 +17,13 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt={siteData.company.name} className="h-14 w-auto" />
+      <div className="container flex items-center justify-between h-24">
+        <Link to="/" className="flex items-center -ml-4">
+          <img
+            src={logo}
+            alt={siteData.company.name}
+            className="h-16 md:h-28 w-auto"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -28,11 +32,10 @@ const Header = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-primary ${
-                location.pathname === link.path
+              className={`text-sm font-medium tracking-wide transition-colors hover:text-primary ${location.pathname === link.path
                   ? "text-primary"
                   : "text-foreground/70"
-              }`}
+                }`}
             >
               {link.label}
             </Link>
@@ -57,11 +60,10 @@ const Header = () => {
               key={link.path}
               to={link.path}
               onClick={() => setMobileOpen(false)}
-              className={`block text-sm font-medium py-2 transition-colors hover:text-primary ${
-                location.pathname === link.path
+              className={`block text-sm font-medium py-2 transition-colors hover:text-primary ${location.pathname === link.path
                   ? "text-primary"
                   : "text-foreground/70"
-              }`}
+                }`}
             >
               {link.label}
             </Link>
